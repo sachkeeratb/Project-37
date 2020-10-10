@@ -61,8 +61,8 @@ function spawnCoins() {
     coin.lifetime = 110;
     //coinsGroup.add(coin);
 
-    if(stickman.isTouching(coin)) {
-      coin.lifetime = -1;
+    if(stickman.x === coin.x) {
+      coinsGroup.destroyEach();
       score++;
     }
   }
